@@ -1,0 +1,188 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+// Colours
+
+$coral-100: rgb(234, 92, 78);
+$grey-40: rgb(223, 228, 231);
+$navy-80: rgb(71, 89, 137);
+$navy-100: rgb(25, 62, 114);
+$navy-120: rgb(17, 41, 75);
+$navy-140: rgb(5, 11, 21);
+
+$theme-colors: (
+  'primary': $navy-100,
+  'secondary': $navy-120,
+  'danger': #ff4136
+);
+
+// Typography
+
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+
+$lead-font-size: $font-size-base * 1.375;
+
+// Inputs
+
+$input-border-radius-lg: 37px;
+
+// Buttons
+
+$btn-padding-y: 12px;
+$btn-padding-x: 20px;
+$btn-font-size: 19px;
+$btn-line-height: 22px;
+
+$btn-padding-y-sm: 8px;
+$btn-padding-x-sm: 16px;
+$btn-font-size-sm: 16px;
+
+$btn-padding-y-lg: 12px;
+$btn-padding-x-lg: 24px;
+$btn-font-size-lg: 22px;
+
+$btn-border-radius: 30px;
+$btn-border-radius-sm: 30px;
+$btn-border-radius-lg: 30px;
+
+$btn-link-disabled-color: red;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// Then add additional custom code here
+
+@import '_include-media';
+
+$breakpoints: (
+  phone: 320px,
+  tablet: 768px,
+  desktop: 1024px
+);
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  // padding-top: 3rem;
+  // padding-bottom: 3rem;
+  color: #5a5a5a;
+  font-family: 'Lato', sans-serif;
+}
+
+// Buttons
+
+.btn {
+  letter-spacing: 1px;
+  i {
+    font-size: 12px;
+  }
+}
+
+.btn-lg i {
+  font-size: 16px;
+}
+
+.btn-primary {
+  color: rgb(250, 250, 250);
+  i {
+    color: rgb(250, 250, 250);
+  }
+  &.destructive {
+    background-color: $coral-100;
+    border-color: $coral-100;
+    color: $navy-140;
+    i {
+      color: $navy-140;
+      transition: color 0.15s ease-in-out;
+    }
+    &:hover {
+      color: rgb(250, 250, 250);
+      border-color: $navy-120;
+      i {
+        transition: color 0.15s ease-in-out;
+        color: rgb(250, 250, 250);
+      }
+    }
+  }
+  &:hover {
+    background-color: $navy-120;
+  }
+}
+
+.btn-secondary {
+  color: $navy-100;
+  background-color: #fff;
+}
+
+.btn:disabled {
+  background-color: $grey-40;
+  border-color: $navy-80;
+  color: $navy-80;
+
+  i {
+    color: $navy-80;
+  }
+}
+
+// Site blocks
+
+.search-component-wrapper {
+  .input-group {
+    position: relative;
+    .form-control {
+      padding-right: 80px;
+      padding-left: 32px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 37px !important;
+      ::placeholder {
+        color: red !important;
+      }
+    }
+
+    .btn {
+      margin-left: -57px !important;
+      position: relative;
+      z-index: 999;
+      padding: 0.5rem 1rem;
+      // top: 0;
+      // bottom: 0;
+      // left: auto;
+      // right: 0;
+      background-color: transparent;
+      border: none;
+      &:focus {
+        box-shadow: none;
+        border: none;
+      }
+
+      i {
+        color: rgba(0, 0, 0, 0.4);
+        font-size: 24px;
+      }
+      &::before {
+        position: absolute;
+        content: '';
+        width: 1px;
+        left: 0;
+        top: 8px;
+        bottom: 8px;
+        border-left: 1px solid rgba(0, 0, 0, 0.2);
+      }
+    }
+    &.input-group-lg {
+      .form-control {
+        padding-top: 18px;
+        padding-bottom: 18px;
+      }
+      .btn {
+        i {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
