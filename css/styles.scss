@@ -83,6 +83,32 @@ $danger: $coral-100;
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
 $lead-font-size: $font-size-base * 1.375;
 
+$headings-color: $navy-140;
+$font-weight-bold: 600;
+
+$h1-font-size: $font-size-base * 2.3125;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.5;
+$h4-font-size: $font-size-base * 1.375;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+$headings-font-weight: 600;
+
+$hr-color: $navy-140;
+$hr-opacity: 1;
+
+$display-font-sizes: (
+  1: 2.3125rem,
+  2: 2rem,
+  3: 1.5rem,
+  4: 1.375rem,
+  5: 1rem,
+  6: 1em
+);
+
+$display-font-weight: 600;
+
 // Inputs
 
 $input-border-radius-lg: 37px;
@@ -123,22 +149,14 @@ $utilities: map-merge(
       map-merge(
         map-get($utilities, 'color'),
         (
-          values:
-            map-merge(
-              map-get(map-get($utilities, 'color'), 'values'),
-              ($all-colors)
-            )
+          values: map-merge(map-get(map-get($utilities, 'color'), 'values'), ($all-colors))
         )
       ),
     'background-color':
       map-merge(
         map-get($utilities, 'background-color'),
         (
-          values:
-            map-merge(
-              map-get(map-get($utilities, 'background-color'), 'values'),
-              ($all-colors)
-            )
+          values: map-merge(map-get(map-get($utilities, 'background-color'), 'values'), ($all-colors))
         )
       )
   )
@@ -185,11 +203,22 @@ $utilities: map-merge(
 // import google font
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
+// end
+
 body {
   // padding-top: 3rem;
   // padding-bottom: 3rem;
   color: #5a5a5a;
   font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
 }
 
 // Buttons
@@ -304,5 +333,146 @@ body {
         }
       }
     }
+  }
+}
+
+// Funding and Awards specific
+
+header {
+  .main-logo {
+    img {
+      max-width: 198px;
+      @include media-breakpoint-up(sm) {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+// Explore other sites
+#explore-other-sites {
+  padding: 2rem 0;
+
+  @include media-breakpoint-up(md) {
+    div[class*='col'] {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .wrapper {
+    padding: 1.5rem 1.5rem 100px 1.5rem;
+    min-height: 381px;
+    @include media-breakpoint-up(md) {
+      flex: 1 0;
+    }
+  }
+
+  div[class*='col']:nth-child(1) .wrapper {
+    color: $grey-5;
+    background: $navy url('../img/gr-1.png') no-repeat right bottom;
+    a {
+      color: $grey-5;
+      border-color: $grey-5;
+    }
+  }
+
+  div[class*='col']:nth-child(2) .wrapper {
+    color: $navy-140;
+    background: $coral-60 url('../img/gr-2.png') no-repeat right bottom;
+    a {
+      color: $navy-140;
+      border-color: $navy-140;
+    }
+  }
+
+  div[class*='col']:nth-child(3) .wrapper {
+    color: $grey-5;
+    background: $navy-100 url('../img/gr-3.png') no-repeat right bottom;
+    a {
+      color: $grey-5;
+      border-color: $grey-5;
+    }
+  }
+
+  h5 {
+    margin-bottom: 2rem;
+  }
+
+  h6 {
+    font-size: 1.375rem;
+    margin-bottom: 1.5rem;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        border-bottom: 1px solid $primary;
+        font-size: 1.375rem;
+        font-weight: normal;
+      }
+      i {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+
+// end
+
+footer {
+  .footer-nav {
+    ul {
+      margin: 0;
+      padding: 3rem 0 0 0;
+
+      @include media-breakpoint-up(lg) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 0 32px;
+      }
+
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          padding: 10px 0;
+          display: block;
+          color: $navy-140;
+        }
+      }
+    }
+  }
+  .social-media-links {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    li {
+      list-style: none;
+      margin-right: 15px;
+
+      a {
+        background-color: #000;
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        width: 48px;
+        height: 48px;
+        border: 1px solid black;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .funded-by-department-of-health-and-social-care-logo {
+    margin: 20px 0;
+    display: inline-block;
   }
 }

@@ -81,10 +81,10 @@ body {
 
 hr {
   margin: 1rem 0;
-  color: inherit;
+  color: #050b15;
   background-color: currentColor;
   border: 0;
-  opacity: 0.25;
+  opacity: 1;
 }
 
 hr:not([size]) {
@@ -94,17 +94,18 @@ hr:not([size]) {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
+  color: #050b15;
 }
 
 h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: calc(1.35625rem + 1.275vw);
 }
 
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 2.5rem;
+    font-size: 2.3125rem;
   }
 }
 
@@ -119,22 +120,22 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: calc(1.3rem + 0.6vw);
-}
-
-@media (min-width: 1200px) {
-  h3, .h3 {
-    font-size: 1.75rem;
-  }
-}
-
-h4, .h4 {
   font-size: calc(1.275rem + 0.3vw);
 }
 
 @media (min-width: 1200px) {
-  h4, .h4 {
+  h3, .h3 {
     font-size: 1.5rem;
+  }
+}
+
+h4, .h4 {
+  font-size: calc(1.2625rem + 0.15vw);
+}
+
+@media (min-width: 1200px) {
+  h4, .h4 {
+    font-size: 1.375rem;
   }
 }
 
@@ -185,7 +186,7 @@ ul ol {
 }
 
 dt {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 dd {
@@ -286,7 +287,7 @@ kbd {
 kbd kbd {
   padding: 0;
   font-size: 1em;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 figure {
@@ -496,75 +497,63 @@ progress {
 }
 
 .display-1 {
-  font-size: calc(1.625rem + 4.5vw);
-  font-weight: 300;
+  font-size: calc(1.35625rem + 1.275vw);
+  font-weight: 600;
   line-height: 1.2;
 }
 
 @media (min-width: 1200px) {
   .display-1 {
-    font-size: 5rem;
+    font-size: 2.3125rem;
   }
 }
 
 .display-2 {
-  font-size: calc(1.575rem + 3.9vw);
-  font-weight: 300;
+  font-size: calc(1.325rem + 0.9vw);
+  font-weight: 600;
   line-height: 1.2;
 }
 
 @media (min-width: 1200px) {
   .display-2 {
-    font-size: 4.5rem;
+    font-size: 2rem;
   }
 }
 
 .display-3 {
-  font-size: calc(1.525rem + 3.3vw);
-  font-weight: 300;
+  font-size: calc(1.275rem + 0.3vw);
+  font-weight: 600;
   line-height: 1.2;
 }
 
 @media (min-width: 1200px) {
   .display-3 {
-    font-size: 4rem;
+    font-size: 1.5rem;
   }
 }
 
 .display-4 {
-  font-size: calc(1.475rem + 2.7vw);
-  font-weight: 300;
+  font-size: calc(1.2625rem + 0.15vw);
+  font-weight: 600;
   line-height: 1.2;
 }
 
 @media (min-width: 1200px) {
   .display-4 {
-    font-size: 3.5rem;
+    font-size: 1.375rem;
   }
 }
 
 .display-5 {
-  font-size: calc(1.425rem + 2.1vw);
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 600;
   line-height: 1.2;
-}
-
-@media (min-width: 1200px) {
-  .display-5 {
-    font-size: 3rem;
-  }
 }
 
 .display-6 {
-  font-size: calc(1.375rem + 1.5vw);
-  font-weight: 300;
+  font-size: 1em;
+  font-weight: 600;
   line-height: 1.2;
-}
-
-@media (min-width: 1200px) {
-  .display-6 {
-    font-size: 2.5rem;
-  }
 }
 
 .list-unstyled {
@@ -5566,7 +5555,7 @@ fieldset:disabled .btn {
   display: inline-block;
   padding: 0.35em 0.65em;
   font-size: 0.75em;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   color: #fff;
   text-align: center;
@@ -5597,7 +5586,7 @@ fieldset:disabled .btn {
 }
 
 .alert-link {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .alert-dismissible {
@@ -6824,6 +6813,7 @@ fieldset:disabled .btn {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
   font-size: 1rem;
+  color: #050b15;
   background-color: #f0f0f0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   border-top-left-radius: calc(0.3rem - 1px);
@@ -7598,7 +7588,7 @@ fieldset:disabled .btn {
   width: 1px;
   min-height: 1em;
   background-color: currentColor;
-  opacity: 0.25;
+  opacity: 1;
 }
 
 .align-baseline {
@@ -8648,7 +8638,7 @@ fieldset:disabled .btn {
 }
 
 .fs-1 {
-  font-size: calc(1.375rem + 1.5vw) !important;
+  font-size: calc(1.35625rem + 1.275vw) !important;
 }
 
 .fs-2 {
@@ -8656,11 +8646,11 @@ fieldset:disabled .btn {
 }
 
 .fs-3 {
-  font-size: calc(1.3rem + 0.6vw) !important;
+  font-size: calc(1.275rem + 0.3vw) !important;
 }
 
 .fs-4 {
-  font-size: calc(1.275rem + 0.3vw) !important;
+  font-size: calc(1.2625rem + 0.15vw) !important;
 }
 
 .fs-5 {
@@ -8692,7 +8682,7 @@ fieldset:disabled .btn {
 }
 
 .fw-bold {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 
 .fw-bolder {
@@ -12103,16 +12093,16 @@ fieldset:disabled .btn {
 
 @media (min-width: 1200px) {
   .fs-1 {
-    font-size: 2.5rem !important;
+    font-size: 2.3125rem !important;
   }
   .fs-2 {
     font-size: 2rem !important;
   }
   .fs-3 {
-    font-size: 1.75rem !important;
+    font-size: 1.5rem !important;
   }
   .fs-4 {
-    font-size: 1.5rem !important;
+    font-size: 1.375rem !important;
   }
 }
 
@@ -12157,6 +12147,10 @@ fieldset:disabled .btn {
 body {
   color: #5a5a5a;
   font-family: 'Lato', sans-serif;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-weight: 400;
 }
 
 .btn {
@@ -12286,5 +12280,167 @@ body {
 
 .search-component-wrapper .input-group.input-group-lg .btn i {
   font-size: 24px;
+}
+
+header .main-logo img {
+  max-width: 198px;
+}
+
+@media (min-width: 576px) {
+  header .main-logo img {
+    max-width: 100%;
+  }
+}
+
+#explore-other-sites {
+  padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  #explore-other-sites div[class*='col'] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#explore-other-sites .wrapper {
+  padding: 1.5rem 1.5rem 100px 1.5rem;
+  min-height: 381px;
+}
+
+@media (min-width: 768px) {
+  #explore-other-sites .wrapper {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0;
+            flex: 1 0;
+  }
+}
+
+#explore-other-sites div[class*='col']:nth-child(1) .wrapper {
+  color: #fcfcfd;
+  background: #193e72 url("../img/gr-1.png") no-repeat right bottom;
+}
+
+#explore-other-sites div[class*='col']:nth-child(1) .wrapper a {
+  color: #fcfcfd;
+  border-color: #fcfcfd;
+}
+
+#explore-other-sites div[class*='col']:nth-child(2) .wrapper {
+  color: #050b15;
+  background: #f3a591 url("../img/gr-2.png") no-repeat right bottom;
+}
+
+#explore-other-sites div[class*='col']:nth-child(2) .wrapper a {
+  color: #050b15;
+  border-color: #050b15;
+}
+
+#explore-other-sites div[class*='col']:nth-child(3) .wrapper {
+  color: #fcfcfd;
+  background: #193e72 url("../img/gr-3.png") no-repeat right bottom;
+}
+
+#explore-other-sites div[class*='col']:nth-child(3) .wrapper a {
+  color: #fcfcfd;
+  border-color: #fcfcfd;
+}
+
+#explore-other-sites h5, #explore-other-sites .h5 {
+  margin-bottom: 2rem;
+}
+
+#explore-other-sites h6, #explore-other-sites .h6 {
+  font-size: 1.375rem;
+  margin-bottom: 1.5rem;
+}
+
+#explore-other-sites ul {
+  margin: 0;
+  padding: 0;
+}
+
+#explore-other-sites ul li {
+  list-style: none;
+}
+
+#explore-other-sites ul li a {
+  text-decoration: none;
+  border-bottom: 1px solid #193e72;
+  font-size: 1.375rem;
+  font-weight: normal;
+}
+
+#explore-other-sites ul li i {
+  margin-left: 0.5rem;
+}
+
+footer .footer-nav ul {
+  margin: 0;
+  padding: 3rem 0 0 0;
+}
+
+@media (min-width: 992px) {
+  footer .footer-nav ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0 32px;
+  }
+}
+
+footer .footer-nav ul li {
+  list-style: none;
+}
+
+footer .footer-nav ul li a {
+  text-decoration: none;
+  padding: 10px 0;
+  display: block;
+  color: #050b15;
+}
+
+footer .social-media-links {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .social-media-links li {
+  list-style: none;
+  margin-right: 15px;
+}
+
+footer .social-media-links li a {
+  background-color: #000;
+  border-radius: 50%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  width: 48px;
+  height: 48px;
+  border: 1px solid black;
+  text-decoration: none;
+}
+
+footer .funded-by-department-of-health-and-social-care-logo {
+  margin: 20px 0;
+  display: inline-block;
 }
 /*# sourceMappingURL=styles.css.map */
