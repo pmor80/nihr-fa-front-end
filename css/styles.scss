@@ -349,6 +349,25 @@ header {
   }
 }
 
+// Latest Awards
+
+#latest-awards {
+  padding: 2rem 0;
+
+  .row {
+    padding-top: 2rem;
+    border-bottom: 1px solid $navy-140;
+  }
+
+  dl {
+    dt {
+      font-weight: normal;
+    }
+  }
+}
+
+// end
+
 // Explore other sites
 #explore-other-sites {
   padding: 2rem 0;
